@@ -1,7 +1,11 @@
 package miage.m1.dice;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Component;
 
+@Setter
+@Getter
 @Component
 public class Dice {
     private int value;
@@ -15,7 +19,4 @@ public class Dice {
         return getValue();
     }
 
-    public int getValue() {
-        return this.value;
-    }
 }
