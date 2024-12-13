@@ -10,8 +10,9 @@ public class Dice {
         roll();
     }
 
-    public void roll() {
+    public int roll() {
         this.value = (int) (Math.random() * 6) + 1;
+        return getValue();
     }
 
     public int getValue() {
