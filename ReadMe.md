@@ -84,6 +84,18 @@ Pour ne pas avoir à utiliser un repository dans le controleur, j'ai utilisé le
 - **Lombok** :
   - Utilisez Lombok pour simplifier les getters, setters et constructeurs de vos entités.
 
+Avec gradle j'ai du ajouter la dépendance suivante pour pouvoir utiliser Lombok :
+```groovy
+compileOnly 'org.projectlombok:lombok:1.18.28'
+annotationProcessor 'org.projectlombok:lombok:1.18.28'
+```
+et pour swagger :
+```groovy
+implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+```
+
+Cela permet d'accéder à la documentation de l'API sur l'URL suivante : `http://localhost:8081/swagger-ui/index.html`
+
 ## Structure des fichiers
 
 ### `src/main/java/miage/m1/dice/Dice.java`
@@ -103,10 +115,6 @@ Contrôleur REST avec les endpoints pour lancer des dés et récupérer les rés
 
 ### `src/main/resources/application.properties`
 Fichier de configuration de l'application, incluant le port et le nom du projet.
-
-## Livrables
-- Le code complet du projet, accessible via un dépôt GitHub.
-- Un fichier `README.md` décrivant les étapes réalisées.
 
 ## Technologies
 - **Framework principal** : Spring Boot
